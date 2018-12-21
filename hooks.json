@@ -16,7 +16,8 @@
         [
             {
                 "source": "payload",
-                "name": "secrets"
+                "name": "secrets",
+                "base64decode": true
             }
         ]
     }
