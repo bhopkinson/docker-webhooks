@@ -7,7 +7,7 @@
         "include-command-output-in-response-on-error": true
     },
     {
-        "id": "update-hass-secrets",
+        "id": "update-secrets",
         "execute-command": "/etc/commands/update-secrets.sh",
         "command-working-directory": "/hass-config",
         "include-command-output-in-response": true,

@@ -6,7 +6,7 @@ COPY hooks.json /etc/webhook/hooks.json
 COPY git-pull.sh /etc/commands/git-pull.sh
 RUN ["chmod", "+x", "/etc/commands/git-pull.sh"]
 
-COPY update-secrets.sh /etc/commands/uodate-secrets.sh
+COPY update-secrets.sh /etc/commands/update-secrets.sh
 RUN ["chmod", "+x", "/etc/commands/update-secrets.sh"]
 
 CMD ["-verbose", "-hooks=/etc/webhook/hooks.json"]
