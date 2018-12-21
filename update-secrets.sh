@@ -1,5 +1,4 @@
 #!/bin/sh
-echo $SECRETS
-cat $SECRETS
+echo $HOOK_SECRETS
 cp -f secrets.yaml secrets_backup.yaml
-cp -f $SECRETS secrets.yaml
+cp -f $HOOK_SECRETS secrets.yaml

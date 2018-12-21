@@ -16,8 +16,7 @@
         [
             {
                 "source": "payload",
-                "name": "secrets",
-                "envname": "$SECRETS"
+                "name": "secrets"
             }
         ]
     }
