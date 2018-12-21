@@ -15,7 +15,8 @@
         "pass-file-to-command": 
         [
             {
-                "source": "entire-payload",
+                "source": "payload",
+                "name": "secrets",
                 "envname": "$SECRETS"
             }
         ]
