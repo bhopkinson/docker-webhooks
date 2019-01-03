@@ -1,12 +1,9 @@
 FROM almir/webhook
 RUN  apk add --update -t git
 
-COPY hooks.json /etc/webhook/hooks.json
+COPY webhook/hooks.json /etc/webhook/hooks.json
+COPY commands /etc/commands
 
-COPY git-pull.sh /etc/commands/git-pull.sh
-RUN ["chmod", "+x", "/etc/commands/git-pull.sh"]
-
-COPY update-secrets.sh /etc/commands/update-secrets.sh
-RUN ["chmod", "+x", "/etc/commands/update-secrets.sh"]
+RUN ["chmod -R", "+x", "/etc/commands"]
 
 CMD ["-verbose", "-hooks=/etc/webhook/hooks.json"]

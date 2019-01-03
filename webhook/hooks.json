@@ -1,0 +1,67 @@
+[
+    {
+        "id": "git-pull",
+        "execute-command": "/etc/commands/git-pull.sh",
+        "command-working-directory": "/",
+        "include-command-output-in-response": true,
+        "include-command-output-in-response-on-error": true,
+        "pass-environment-to-command":
+        [
+            {
+                "envname": "FOLDER",
+                "source": "payload",
+                "name": "folder"
+            }
+        ]
+    },
+    {
+        "id": "git-push",
+        "execute-command": "/etc/commands/git-push.sh",
+        "command-working-directory": "/",
+        "include-command-output-in-response": true,
+        "include-command-output-in-response-on-error": true,
+        "pass-environment-to-command":
+        [
+            {
+                "envname": "FOLDER",
+                "source": "payload",
+                "name": "folder"
+            }
+        ]
+    },
+    {
+        "id": "git-commit",
+        "execute-command": "/etc/commands/git-commit.sh",
+        "command-working-directory": "/",
+        "include-command-output-in-response": true,
+        "include-command-output-in-response-on-error": true,
+        "pass-environment-to-command":
+        [
+            {
+                "envname": "COMMIT_MESSAGE",
+                "source": "payload",
+                "name": "message"
+            },
+            {
+                "envname": "FOLDER",
+                "source": "payload",
+                "name": "folder"
+            }
+        ]
+    },
+    {
+        "id": "update-secrets",
+        "execute-command": "/etc/commands/update-secrets.sh",
+        "command-working-directory": "/hass-config",
+        "include-command-output-in-response": true,
+        "include-command-output-in-response-on-error": true,
+        "pass-file-to-command": 
+        [
+            {
+                "source": "payload",
+                "name": "secrets",
+                "base64decode": true
+            }
+        ]
+    }
+]
