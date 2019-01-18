@@ -8,7 +8,7 @@
         "pass-arguments-to-command":
         [
             {
-                "source": "payload",
+                "source": "entire-payload",
                 "name": "folder"
             }
         ]
