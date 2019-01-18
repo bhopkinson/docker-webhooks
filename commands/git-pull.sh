@@ -1,3 +1,5 @@
 #!/bin/sh
+echo $FOLDER
 cd $FOLDER
-git pull
+pwd
+#!git pull
