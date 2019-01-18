@@ -8,7 +8,6 @@
         "pass-environment-to-command":
         [
             {
-                "envname": "FOLDER",
                 "source": "payload",
                 "name": "folder"
             }
