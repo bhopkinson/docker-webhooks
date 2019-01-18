@@ -2,7 +2,7 @@ FROM almir/webhook
 RUN  apk add --update -t git
 
 COPY webhook/hooks.json /etc/webhook/hooks.json
-COPY commands /etc/commands
+COPY commands/* /etc/commands/
 
 RUN ["chmod -R", "+x", "/etc/commands"]
 
