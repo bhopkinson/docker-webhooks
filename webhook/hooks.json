@@ -9,7 +9,7 @@
         [
             {
                 "envname": "FOLDER",
-                "source": "payload",
+                "source": "url",
                 "name": "folder"
             }
         ]
