@@ -1,5 +1,5 @@
 #!/bin/sh
-echo $HOOK_FOLDER
-cd $HOOK_FOLDER
+echo $1
+cd $1
 pwd
-#!git pull
+git pull
