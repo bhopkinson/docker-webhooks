@@ -1,5 +1,12 @@
 [
     {
+        "id": "docker-prune",
+        "execute-command": "/etc/commands/docker-prune.sh",
+        "command-working-directory": "/",
+        "include-command-output-in-response": true,
+        "include-command-output-in-response-on-error": true
+    },
+    {
         "id": "git-pull",
         "execute-command": "/etc/commands/git-pull.sh",
         "command-working-directory": "/",

@@ -4,6 +4,7 @@ RUN  apk add --update -t git
 COPY webhook/hooks.json /etc/webhook/hooks.json
 COPY commands/* /etc/commands/
 
+RUN ["chmod", "+x", "/etc/commands/docker-prune.sh"]
 RUN ["chmod", "+x", "/etc/commands/git-commit.sh"]
 RUN ["chmod", "+x", "/etc/commands/git-pull.sh"]
 RUN ["chmod", "+x", "/etc/commands/git-push.sh"]
