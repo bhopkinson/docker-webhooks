@@ -24,7 +24,7 @@
         [
             {
                 "envname": "FOLDER",
-                "source": "payload",
+                "source": "url",
                 "name": "folder"
             }
         ]
@@ -39,12 +39,27 @@
         [
             {
                 "envname": "COMMIT_MESSAGE",
-                "source": "payload",
+                "source": "url",
                 "name": "message"
             },
             {
                 "envname": "FOLDER",
-                "source": "payload",
+                "source": "url",
+                "name": "folder"
+            }
+        ]
+    },
+    {
+        "id": "git-sync",
+        "execute-command": "/etc/commands/git-sync.sh",
+        "command-working-directory": "/",
+        "include-command-output-in-response": true,
+        "include-command-output-in-response-on-error": true,
+        "pass-environment-to-command":
+        [
+            {
+                "envname": "FOLDER",
+                "source": "url",
                 "name": "folder"
             }
         ]
